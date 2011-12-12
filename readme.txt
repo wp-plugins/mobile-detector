@@ -49,7 +49,9 @@ This plugin adds the following **global variables** (boolean values) to Wordpres
 
 The initial value of these variables is `false`.
 
-If you need to debug the plugin, you can do it calling the global function: `margenn_mobile_detector(true)`. Calling that function will output the results.
+You can test/debug the plugin results (debug mode) [here](http://www.margenn.com/tubal/mobile_detector/).
+
+If you need to debug the plugin, you can do it calling the global function: `margenn_mobile_detector(true)`. Calling this function will output the results.
 
 Suggestions?, bugs? report them in the plugin forum.
 
