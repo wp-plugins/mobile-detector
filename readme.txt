@@ -1,2 +1,2 @@
 === Plugin Name ===
-Stable tag: 1.0
+Stable tag: 1.1
