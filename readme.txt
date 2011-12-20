@@ -57,7 +57,7 @@ Easy, paste this snippet in your functions.php file:
         exit;
     }
 }
-add_action('plugins_loaded', 'mobile_redirect');`
+add_action('plugins_loaded', 'mobile_redirect');` 
 
 **Debugging**
 
