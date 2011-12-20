@@ -53,7 +53,7 @@ Easy, paste this snippet in your functions.php file:
 `function mobile_redirect() {
     global $is_mobile;
     if ( $is_mobile ) {
-        header( "Location: http://m.example.com/" ); // Mobile site URL
+        header( 'Location: http://m.example.com ' ); // Mobile site URL
         exit;
     }
 }
