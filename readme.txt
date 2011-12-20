@@ -53,13 +53,14 @@ Easy, paste this snippet in your functions.php file:
 `function mobile_redirect() {
     global $is_mobile;
     if ( $is_mobile ) {
-        header( 'Location: http:\/\/m.example.com' ); // Mobile site URL
+        header( 'Location: http://m.example.com/' ); // Mobile site URL
         exit;
     }
 }
 add_action('plugins_loaded', 'mobile_redirect');`
 
 **Debugging**
+
 You can test/debug the plugin results (debug mode) [here](http://www.margenn.com/tubal/mobile_detector/).
 
 If you need to debug the plugin, you can do it calling the global function: `margenn_mobile_detector(true)`. Calling this function will output the results.
