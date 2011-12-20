@@ -50,14 +50,17 @@ The initial value of these variables is `false`.
 **How can I redirect a user to the mobile version of my site?**
 
 Easy, paste this snippet in your functions.php file:
-`function mobile_redirect() {
+
+`
+function mobile_redirect() {
     global $is_mobile;
     if ( $is_mobile ) {
         header( 'Location: http://m.example.com ' ); // Mobile site URL
         exit;
     }
 }
-add_action('plugins_loaded', 'mobile_redirect');` 
+add_action('plugins_loaded', 'mobile_redirect');
+`
 
 
 **Debugging**
