@@ -55,11 +55,12 @@ Easy, paste this snippet in your functions.php file:
 function mobile_redirect() {
     global $is_mobile;
     if ( $is_mobile ) {
-        header( 'Location: http://m.example.com ' ); // Mobile site URL
+        // replace URL_TO_MOBILE_SITE with your site's mobile URL i.e. http://mobile.example.com
+        header( 'Location: URL_TO_MOBILE_SITE' );
         exit;
     }
 }
-add_action('plugins_loaded', 'mobile_redirect');
+add_action('after_setup_theme', 'mobile_redirect');
 `
 
 
