@@ -57,7 +57,13 @@ Available keys:
 
 **Theme Switching**
 
-From version 2.0 onwards, you can configure your site to automatically switch to a mobile theme when a mobile device is detected or when the user requests it (on demand). Theme switching is disabled by default. To enable it, simply select a theme to use as your mobile theme.
+You can configure your site to automatically switch to a mobile theme when a mobile device is detected or when the user requests it (on demand).
+
+Once the plugin is installed, a new submenu titled `Mobile Detector` is added under the `Settings` menu. 
+
+Theme switching is disabled by default. To enable theme switching simply select a theme to use as your mobile theme and the plugin will take care of the rest.
+
+This plugin assumes your active theme is optimized for desktop screens only. So, if you're using a responsive theme that adapts to any screen size you shouldn't use the theme switching feature (don't select a theme).
 
 How it works:
 
@@ -66,17 +72,13 @@ How it works:
 * If the cookie does not exist (first-time visitor), this plugin checks whether the user is visiting your site with a mobile device or not and, if he is, your mobile-optimized theme will be used. Afterwards, a cookie will be set to store the user's "initial preference".
 * Anytime the user switches* between themes, the cookie is updated with his preference so the site version (theme) the user expects will be displayed on future visits.
 
-When you install the plugin a new submenu titled `Mobile Detector` is added under the `Settings` menu. There, you can select a theme optimized for mobile devices and the plugin will take care of the rest.
-
-The plugin assumes your active theme is optimized for desktop screens only. So if you're using a responsive theme that adapts to any screen size you shouldn't use the theme switching feature.
-
 **Template functions**
 
 * `MobileDTS::get_switch_theme_link()` Returns the current URL with an additional `switch_theme` parameter (set automatically to 'mobile' or 'desktop'). You'll need this function to create a link/button that allows users to switch between the desktop and mobile themes. See example below.
 
 * `MobileDTS::switch_theme_link()`: same as above but this one outputs the URL instead of returning it. URL is escaped.
 
-* `MobileDTS::get_switch_theme_name()` returns the type of the theme to switch to (either 'mobile' or 'desktop'). Use this method together with `MobileDTS::get_switch_theme_link()`. The type can be translated to your language (internally uses wp's `__()` function for 'mobile' & 'desktop' strings).
+* `MobileDTS::get_switch_theme_name()` returns the type of the theme to switch to (either 'mobile' or 'desktop'). Use this method together with `get_switch_theme_link()`. The type can be translated to your language (plugin uses wp's `__()` function for 'mobile' & 'desktop' strings).
 
 * `MobileDTS::switch_theme_name()` same as above but this one outputs the type instead of returning it.
 
@@ -90,7 +92,7 @@ Let's create a switch link to allow the user to switch between the 2 versions of
 <a href="<?php MobileDTS::switch_theme_link() ?>">Switch to the <?php MobileDTS::switch_theme_name() ?> version of this site</a>
 `
 
-Paste that code in your templates (usually in `header.php` and/or `footer.php`) and play a little.
+Paste that code in your templates (usually in `header.php` and/or `footer.php`), enable theme switching and play a little.
 
 Let's suppose a user is viewing the site (http://example.com/home) for the first time with a mobile device and theme switching is enabled. The above code would output this link:
 
