@@ -11,19 +11,18 @@ Lightweight detector of mobile devices, OSs & browsers. Optionally a theme switc
 
 A lightweight detector of mobile devices, OSs & browsers that, optionally, allows your site to switch to a mobile theme when a mobile device is detected or on demand.
 
-= Documentation =
-
 This plugin adds the class **MobileDTS** to Wordpress.
 
-**Mobile Detection**
+= Mobile Detection =
 
 On every request, this plugin will try to detect if the user is viewing your site with a mobile device or not. If he is, the detector will also give you some info about the device, browser and OS used.
 
-How to query the detector?
+**How to query the detector?**
 
 Use the method `MobileDTS::is($key)`. `is()` returns boolean `true` or `false`. If key is not found, `is()` returns `null`. 
 
 Example:
+
 `<?php
 
 if (MobileDTS::is('mobile')) {
@@ -34,12 +33,18 @@ if (MobileDTS::is('mobile')) {
 
 ?>`
 
-Available keys:
+**Available keys:**
 
 * `mobile` (Is it a mobile?)
+
+Popular mobile devices
+
 * `iphone` (Apple iPhone)
 * `ipad` (Apple iPad)
 * `kindle` (Amazon Kindle)
+
+Mobile OS
+
 * `android` (Android OS)
 * `bada` (Bada OS)
 * `bbos` (Blackberry OS)
@@ -48,6 +53,9 @@ Available keys:
 * `symbian` (Symbian OS)
 * `webos` (Hp WebOS)
 * `windows` (Windows Phone OS and older)
+
+Mobile browsers
+
 * `ff_mobile` (Mozilla Fennec & Firefox mobile)
 * `ie_mobile` (IE mobile)
 * `netfront` (NetFront)
@@ -55,7 +63,7 @@ Available keys:
 * `uc_browser` (UC Browser)
 * `webkit_mobile` (Webkit mobile)
 
-**Theme Switching**
+= Theme Switching = 
 
 You can configure your site to automatically switch to a mobile theme when a mobile device is detected or when the user requests it (on demand).
 
@@ -65,7 +73,7 @@ Theme switching is disabled by default. To enable theme switching simply select 
 
 This plugin assumes your active theme is optimized for desktop screens only. So, if you're using a responsive theme that adapts to any screen size you shouldn't use the theme switching feature (don't select a theme).
 
-How it works:
+**How it works:**
 
 * On each page load, this plugin checks for the existence of a cookie that stores which theme (mobile-optimized or desktop-optimized) the user prefers to browse.
 * If the cookie exists, the theme the user expects will be displayed.
@@ -99,44 +107,6 @@ Let's suppose a user is viewing the site (http://example.com/home) for the first
 `
 <a href="http://example.com/home?switch_theme=desktop">Switch to the desktop version of this site</a>
 `
-
-= Documentation for older versions (v1.x) =
-
-This plugin adds the following **global variables** (boolean values) to Wordpress:
-
-**Is it a mobile?**
-
-* `$is_mobile`
-
-**Any famous device?**
-
-* `$is_iphone` (Apple iPhone)
-* `$is_ipad` (Apple iPad)
-* `$is_kindle` (Amazon Kindle)
-
-**What mobile OS?**
-
-* `$is_android` (Android OS)
-* `$is_bada` (Bada OS)
-* `$is_bbos` (Blackberry OS)
-* `$is_ios` (Apple iOS)
-* `$is_palmos` (Palm OS)
-* `$is_symbian` (Symbian OS)
-* `$is_webos` (Hp WebOS)
-* `$is_windows` (Windows Phone OS and older)
-
-**What mobile browser?**
-
-* `$is_firefox_mobile` (Mozilla Fennec)
-* `$is_ie_mobile` (IE)
-* `$is_netfront` (NetFront)
-* `$is_opera_mobile` (Opera Mobile or Mini)
-* `$is_uc_browser` (UC Browser)
-* `$is_webkit_mobile` (Webkit)
-
-The initial value of these variables is `false`.
-
-If you need to debug the plugin, you can do it calling the global function: `margenn_mobile_detector(true)`. Calling this function will output the results.
 
 == Changelog ==
 
