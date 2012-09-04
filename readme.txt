@@ -87,7 +87,7 @@ This plugin assumes your active theme is optimized for desktop screens only. So,
 * On each page load, this plugin checks for the existence of a cookie that stores which theme (mobile-optimized or desktop-optimized) the user prefers to browse.
 * If the cookie exists, the theme the user expects will be displayed.
 * If the cookie does not exist (first-time visitor), this plugin checks whether the user is visiting your site with a mobile device or not and, if he is, your mobile-optimized theme will be used. Afterwards, a cookie will be set to store the user's "initial preference".
-* Anytime the user switches* between themes, the cookie is updated with his preference so the site version (theme) the user expects will be displayed on future visits.
+* Anytime the user switches (you must create a link/button in your theme using the Template functions below) between themes, the cookie is updated with his preference so the site version (theme) the user expects will be displayed on future visits.
 
 **Template functions**
 
