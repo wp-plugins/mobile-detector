@@ -117,6 +117,10 @@ Let's suppose a user is viewing the site (http://example.com/home) for the first
 <a href="http://example.com/home?switch_theme=desktop">Switch to the desktop version of this site</a>
 `
 
+== Screenshots == 
+
+1. Theme switching settings page. Select a mobile theme or disable theme switching.
+
 == Changelog ==
 
 = 2.0.1 =
