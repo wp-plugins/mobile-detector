@@ -33,7 +33,6 @@ class MobileDTSAdmin extends MobileDTS {
 ?>
         <div class="wrap">
             <h2>Mobile Detector - Theme switching settings</h2>
-            <?php settings_errors(self::ERROR_SLUG) ?>
             <p>Assuming you have a mobile-optimized theme for your website, you can enable theme switching to provide the following behavior to your site:</p>
             <ol>
                 <li>On each page load, this plugin checks for the existence of a cookie that stores which theme (mobile-optimized or desktop-optimized) the user prefers to browse.</li>
